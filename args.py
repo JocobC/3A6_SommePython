@@ -5,11 +5,17 @@ Programme pour afficher les arguments
 
 Par Jacob Clermont
 """
+import pprint
+import sys
 
 
 def main() -> None:
     """Fonction principale"""
-    pass
+    pprint.pprint(sys.argv, width=40)
+    print()
+    print(f"Il y a {len(sys.argv) - 1} arguments")
+    for i, arg in enumerate(sys.argv):
+        print(f" - arg {i}: {arg}")
 
 
 if __name__ == '__main__':
